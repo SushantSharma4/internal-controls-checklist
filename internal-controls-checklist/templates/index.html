@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Controls Checklist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Internal Controls Checklist</h1>
+
+    <form action="{{ url_for('home') }}" class="input-container" method="POST">
+        <input type="text" placeholder="Enter a Control Question" id="input-control" name="control_question" required>
+        <button id="add_control" type="submit">Add</button>
+    </form>
+
+    <h2>Controls List</h2>
+    <div class="todo_container">
+        {% for item in items %}
+        <div class="todo">
+            <p {% if item.compliant %}style="text-decoration: line-through; color: green;"{% endif %}>
+                {{ item.question }}
+            </p>
+            <div class="actions">
+                <!-- Toggle Compliance -->
+                <form action="{{ url_for('toggle_compliance', control_id=item.id) }}" method="POST">
+                    <input type="checkbox" {% if item.compliant %}checked{% endif %} onchange="this.form.submit()">
+                </form>
+
+                <!-- Delete Control -->
+                <form action="{{ url_for('delete_control', control_id=item.id) }}" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+        <div class="Sushant_footer">
+            <p>
+                Developed by Sushant B. Sharma<br>
+                Internal Controls Audit App © 2025
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

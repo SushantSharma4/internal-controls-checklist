@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+
+.input-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.input-container input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-container button {
+    padding: 10px 20px;
+    margin-left: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #0056b3;
+}
+
+
+.todo_container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.todo p {
+    margin: 0;
+    flex: 1;
+    font-size: 16px;
+}
+
+.todo .actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.actions form {
+    display: inline;
+}
+
+.todo input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.todo button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.todo button:hover {
+    background-color: #c82333;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: green;
+}
+
+
+.Sushant_footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-top: 210px;
+}
+
+
+.login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-box button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.result-summary {
+    width: 60%;
+    margin: 40px auto;
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.result-summary h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.result-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.result-summary li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.result-summary .compliant {
+    color: green;
+    font-weight: bold;
+}
+
+.result-summary .non-compliant {
+    color: red;
+    font-weight: bold;
+}
